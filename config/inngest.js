@@ -9,7 +9,7 @@ export const inngest = new Inngest({ id: "quickcard-next" });
 export const syncUserCreation = inngest.createFunction (
     {
         id: 'sync-user-from-clerk',
-    }
+    },
     { event: 'clerk/user.created' },
     async ({event}) => {
         const { id, firstName, lastName, emailAddress, imageUrl } = event.data;
@@ -28,7 +28,7 @@ export const syncUserCreation = inngest.createFunction (
 export const syncUserUpdate = inngest.createFunction (
     {
         id: 'update-user-from-clerk',
-    }
+    },
     { event: 'clerk/user.updated' },
     async ({event}) => {
         const { id, firstName, lastName, emailAddress, imageUrl } = event.data;

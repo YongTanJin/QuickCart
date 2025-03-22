@@ -1,4 +1,4 @@
-import connnectDB from "@/config/db";
+import connectDB from "@/config/db";
 import authSeller from "@/lib/authSeller";
 import Address from "@/models/Address";
 import Order from "@/models/Order";
@@ -18,7 +18,7 @@ export async function GET(request) {
             return NextResponse.json({ success: false, message: 'not authorzied'})
         }
 
-        await connnectDB()
+        await connectDB()
 
         Address.length
 

@@ -1,4 +1,4 @@
-import connnectDB from "@/config/db";
+import connectDB from "@/config/db";
 import User from "@/models/User";
 import { getAuth } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
@@ -10,7 +10,7 @@ export async function GET(request) {
         
         const { userId } = getAuth(request)
 
-        await connnectDB()
+        await connectDB()
         const user = await User.findById(userId)
 
         const { cartItems } = user

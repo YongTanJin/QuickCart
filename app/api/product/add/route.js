@@ -1,6 +1,6 @@
 import connectDB from "@/config/db";
 import authSeller from "@/lib/authSeller";
-import Product from "@/models/product"; // Ensure correct casing
+import Product from "@/models/Product"; // Ensure correct casing
 import { getAuth } from "@clerk/nextjs/server";
 import { v2 as cloudinary } from "cloudinary";
 import { NextResponse } from "next/server";

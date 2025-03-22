@@ -37,7 +37,7 @@ export const AppContextProvider = (props) => {
 
             const token = await getToken()
 
-            const { data } = await axios.get('api/user/data', { header: { Authrization: 'Bearer ${ token }'}})
+            const { data } = await axios.get('api/user/data', { headers: { Authorization: `Bearer ${token}`}})
 
             if (data.success) {
                 setUserData(data.user)

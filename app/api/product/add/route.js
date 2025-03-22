@@ -25,7 +25,7 @@ export async function POST(request) {
             return NextResponse.json({ success: false, message: 'not authorized' })
         }
 
-        const fromData = await request.feomData()
+        const fromData = await request.fromData()
 
         const name = fromData.get('name')
         const description = fromData.get('description')

@@ -27,13 +27,13 @@ export async function POST(request) {
 
         const fromData = await request.fromData()
 
-        const name = fromData.get('name')
-        const description = fromData.get('description')
-        const category = fromData.get('category')
-        const price = fromData.get('price')
-        const offerPrice = fromData.get('offerPrice')
+        const name = fromData.get('name');
+        const description = fromData.get('description');
+        const category = fromData.get('category');
+        const price = fromData.get('price');
+        const offerPrice = fromData.get('offerPrice');
 
-        const files = fromData.getAll('images')
+        const files = fromData.getAll('images');
 
         if (!files || files.length === 0) {
             return NextResponse.json({ success: false, message: 'no file uploaded' })

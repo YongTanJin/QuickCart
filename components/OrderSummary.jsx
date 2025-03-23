@@ -1,4 +1,3 @@
-import { addressDummyData } from "@/assets/assets";
 import { useAppContext } from "@/context/AppContext";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
@@ -44,7 +43,7 @@ const OrderSummary = () => {
         return toast.error('Please select an address')
       }
 
-      let cartItemsArray = Object.keys(cartItems).map((key) => ({product:key, quantity:cartItems[key]}))
+      let cartItemsArray = Object.keys(cartItems).map((key) => ({Product:key, quantity:cartItems[key]}))
 
       cartItemsArray = cartItemsArray.filter(item => item.quantity > 0 )
 

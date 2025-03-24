@@ -7,7 +7,7 @@ import Order from "@/models/Order";
 export const inngest = new Inngest({ id: "quickcard-next" });
 
 // inngest function to save user data to a database 
-export const syncUserCration = inngest.createFunction(
+export const syncUserCreation = inngest.createFunction(
     {
         id: 'quickcard-next/sync-user-from-clerk' // Updated ID with prefix
     },

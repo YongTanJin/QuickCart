@@ -9,7 +9,7 @@ export const inngest = new Inngest({ id: "quickcard-next" });
 // inngest function to save user data to a database 
 export const syncUserCreation = inngest.createFunction(
     {
-        id: 'quickcard-next/sync-user-from-clerk' // Updated ID with prefix
+        id: 'sync-user-from-clerk'
     },
     { event: 'clerk/user.created' },
     async ({ event }) => {
@@ -28,7 +28,7 @@ export const syncUserCreation = inngest.createFunction(
 // inngest function to update user data table 
 export const syncUserUpdation = inngest.createFunction(
     {
-        id: 'quickcard-next/update-user-from-clerk' // Updated ID with prefix
+        id: 'update-user-from-clerk'
     },
     { event: 'clerk/user.updated' },
     async ({ event }) => {
@@ -47,7 +47,7 @@ export const syncUserUpdation = inngest.createFunction(
 // inngest function to delete user data
 export const syncUserDeletion = inngest.createFunction(
     {
-        id: 'quickcard-next/delete-user-with-clerk' // Updated ID with prefix
+        id: 'ddelete-user-with-clerk'
     },
     { event: 'clerk/user.deleted' },
     async ({ event }) => {
@@ -60,7 +60,7 @@ export const syncUserDeletion = inngest.createFunction(
 // inngest function to create user's order in database
 export const createUserOrder = inngest.createFunction(
     {
-        id: 'quickcard-next/create-user-order', // Updated ID with prefix
+        id: 'create-user-order',
         batchEvents: {
             maxSize: 5,
             timeout: '5s'

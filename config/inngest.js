@@ -15,7 +15,7 @@ export const inngest = new Inngest({ id: "quickcard-next" });
 
 export const  syncUserCration = inngest.createFunction(
     {
-        id:'sync-user-form-clerk'
+        id:'sync-user-from-clerk'
     },
 
     {event: 'clerk/user.created'},

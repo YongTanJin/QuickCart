@@ -47,7 +47,7 @@ export const syncUserUpdation = inngest.createFunction(
 // inngest function to delete user data
 export const syncUserDeletion = inngest.createFunction(
     {
-        id: 'ddelete-user-with-clerk'
+        id: 'delete-user-with-clerk'
     },
     { event: 'clerk/user.deleted' },
     async ({ event }) => {
